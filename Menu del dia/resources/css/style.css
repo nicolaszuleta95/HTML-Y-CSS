@@ -21,6 +21,17 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
 /*--------------------------------------*/
 /* REUSABLE COMPONENTS */
 /*--------------------------------------*/
@@ -69,6 +80,7 @@ h2 {
 h3 {
   font-size: 110%;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 h2:after {
@@ -94,6 +106,7 @@ h2:after {
 .box p {
   font-size: 90%;
   line-height: 145%;
+  text-align: justify;
 }
 
 /*--------------------------------------*/
@@ -104,7 +117,43 @@ ion-icon {
   font-size: 350%;
   display: block;
   color: #e74c3c;
+}
+
+.big-icon {
   margin-bottom: 10px;
+  margin-left: 80px;
+}
+
+.icon-small {
+  float: left;
+  width: 30px;
+  text-align: center;
+  font-size: 110%;
+  margin-right: 10px;
+  margin-bottom: 5px;
+
+  /* secrets to align text and icons */
+  line-height: 120%;
+  vertical-align: middle;
+}
+
+/*--------------------------------------*/
+/* LINKS */
+/*--------------------------------------*/
+
+a:link,
+a:visited {
+  color: #e74c3c;
+  text-decoration: none;
+  border-bottom: 1px solid #e74c3c;
+  padding-bottom: 1px;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
 }
 
 /*--------------------------------------*/
@@ -203,4 +252,122 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active {
   border-bottom: 2px solid #e74c3c;
+}
+
+/*--------------------------------------*/
+/* FEATURES*/
+/*--------------------------------------*/
+
+.section-features .long-copy {
+  margin-bottom: 30px;
+}
+
+/*--------------------------------------*/
+/* MEALS*/
+/*--------------------------------------*/
+
+.section-meals {
+  padding: 0;
+}
+
+.meals-showcase {
+  list-style: none;
+  width: 100%;
+}
+
+.meals-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.meal-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.meal-photo img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+/*--------------------------------------*/
+/* HOW IT WORKS*/
+/*--------------------------------------*/
+
+.section-steps {
+  background-color: #f4f4f4;
+}
+
+.steps-box:first-child {
+  text-align: right;
+  padding-right: 3%;
+  margin-top: 30px;
+}
+
+.steps-box:last-child {
+  padding-left: 3%;
+  margin-top: 70px;
+}
+
+.app-screen {
+  width: 40%;
+  margin-left: 50%;
+}
+
+.works-step {
+  margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+  margin-bottom: 80px;
+}
+
+.works-step div {
+  color: #e74c3c;
+  border: 2px solid #e74c3c;
+  display: inline-block;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  padding: 5px;
+  float: left;
+  font-size: 150%;
+  margin-right: 25px;
+}
+
+.btn-app:link,
+.btn-app:visited {
+  border: 0;
+}
+
+.btn-app img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/*--------------------------------------*/
+/* CITIES*/
+/*--------------------------------------*/
+
+.box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.city-feature {
+  margin-bottom: 5px;
 }
