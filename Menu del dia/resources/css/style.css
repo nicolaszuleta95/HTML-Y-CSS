@@ -161,7 +161,8 @@ a:active {
 /*--------------------------------------*/
 
 .btn:link,
-.btn.visited {
+.btn.visited,
+input[type="Enviar"] {
   display: inline-block;
   padding: 10px 30px;
   font-weight: 300;
@@ -171,7 +172,8 @@ a:active {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type="Enviar"] {
   background-color: #e74c3c;
   border: 1px solid #e74c3c;
   color: #ffffff;
@@ -185,12 +187,15 @@ a:active {
 }
 
 .btn:hover,
-.btn.active {
+.btn.active,
+input[type="Enviar"]:hover,
+input[type="Enviar"]:active {
   background-color: #d62c1a;
 }
 
 .btn-full:hover,
-.btn-full:active {
+.btn-full:active,
+input[type="Enviar"] {
   border: 1px solid #d62c1a;
 }
 
@@ -469,4 +474,93 @@ cite img {
 
 .plan-box ul li {
   padding: 5px 0;
+}
+
+/*--------------------------------------*/
+/*FORM*/
+/*--------------------------------------*/
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="checkbox"] {
+  margin: 10px 5px 10px 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+/*--------------------------------------*/
+/*FOOTER*/
+/*--------------------------------------*/
+
+footer {
+  background-color: #333;
+  padding: 50px;
+  font-size: 80%;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.social-links {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: #ddd;
+}
+
+footer p {
+  color: #888;
+  text-align: center;
+  font-size: 90%;
+  margin-top: 20px;
+}
+
+.footer-logos {
+  font-size: 150%;
+  color: #888;
 }
