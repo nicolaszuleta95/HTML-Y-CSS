@@ -12,13 +12,15 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   background-color: #fff;
   color: #555555;
   font-family: "Lato", "Arial", "sans-serif";
   font-size: 20px;
   font-weight: 300;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 .clearfix {
@@ -233,6 +235,16 @@ header {
   margin-top: 20px;
 }
 
+.logo-black {
+  display: none;
+  height: 50px;
+  width: auto;
+  float: left;
+  margin: 5px 0;
+}
+
+/*MAIN NAVI*/
+
 .main-nav {
   float: right;
   list-style: none;
@@ -258,6 +270,50 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active {
   border-bottom: 2px solid #e74c3c;
+}
+
+/*MOBILE NAVI*/
+
+.mobile-nav-icon {
+  float: right;
+  margin-top: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-nav-icon ion-icon {
+  font-size: 200%;
+  color: #fff;
+}
+
+/*STICKY NAVI*/
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 2px #efefef;
+  z-index: 9999;
+}
+
+.sticky .main-nav {
+  margin-top: 18px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+  padding: 16px 0;
+  color: #555;
+}
+
+.sticky .logo {
+  display: none;
+}
+
+.sticky .logo-black {
+  display: block;
 }
 
 /*--------------------------------------*/
@@ -563,4 +619,16 @@ footer p {
 .footer-logos {
   font-size: 150%;
   color: #888;
+}
+
+/*--------------------------------------*/
+/*ANIMATIONS*/
+/*--------------------------------------*/
+
+.feature-animate {
+  opacity: 0;
+}
+
+.feature-animate.animated {
+  opacity: 1;
 }

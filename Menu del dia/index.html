@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <meta name="viewport" content="width=device-width, initia-scale=1.0" />
+
     <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="vendors/css/grid.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <script
       type="module"
@@ -29,22 +36,32 @@
             alt="Menu del Día Logo"
             class="logo"
           />
-          <ul class="main-nav">
-            <li><a href="#">Domicilios de comida</a></li>
-            <li><a href="#">¿Como funciona?</a></li>
-            <li><a href="#">Nuestras ciudades</a></li>
-            <li><a href="#">Suscríbete</a></li>
+          <img
+            src="resources/img/logo.png"
+            alt="Menu del Día Logo"
+            class="logo-black"
+          />
+          <ul class="main-nav js--main-nav">
+            <li><a href="#features">Domicilios</a></li>
+            <li><a href="#works">¿Como funciona?</a></li>
+            <li><a href="#cities">Nuestras ciudades</a></li>
+            <li><a href="#plans">Suscríbete</a></li>
           </ul>
+          <a class="mobile-nav-icon js--nav-icon"
+            ><ion-icon class="menu-outline" name="menu-outline"></ion-icon
+          ></a>
         </div>
       </nav>
       <div class="hero-text-box">
         <h1>Adiós comida chatarra, Hola comida saludable.</h1>
-        <a class="btn btn-full" href="#">Estoy hambriento</a>
-        <a class="btn btn-ghost" href="#">Muestrame más</a>
+        <a class="btn btn-full js--scroll-to-plans" href="#"
+          >Estoy hambriento</a
+        >
+        <a class="btn btn-ghost js--scroll-to-start" href="#">Muestrame más</a>
       </div>
     </header>
 
-    <section class="section-features">
+    <section class="section-features js--section-features" id="features">
       <div class="row">
         <h2>Te llevamos comida rápido &mdash; no comida rápida</h2>
         <p class="long-copy">
@@ -55,7 +72,7 @@
         </p>
       </div>
 
-      <div class="row">
+      <div class="row feature-animate">
         <div class="col span-1-of-4 box">
           <ion-icon class="big-icon" name="calendar-outline"></ion-icon>
           <h3>Hasta 365 días al año</h3>
@@ -160,7 +177,7 @@
       </ul>
     </section>
 
-    <section class="section-steps">
+    <section class="section-steps" id="works">
       <div class="row">
         <h2>¿Cómo funciona? &mdash; Tan simple como 1, 2, 3</h2>
       </div>
@@ -207,7 +224,7 @@
       </div>
     </section>
 
-    <section class="section-cities">
+    <section class="section-cities" id="cities">
       <div class="row">
         <h2>Actualmente estamos en estas ciudades</h2>
       </div>
@@ -318,7 +335,7 @@
       </div>
     </section>
 
-    <section class="section-plans">
+    <section class="section-plans js--section-plans" id="plans">
       <div class="row">
         <h2>Empieza a comer sano hoy</h2>
       </div>
@@ -574,5 +591,12 @@
         </p>
       </div>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond@0.9.0/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    <script src="resources/js/script.js"></script>
   </body>
 </html>
