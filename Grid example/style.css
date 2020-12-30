@@ -1,0 +1,85 @@
+html {
+  display: grid;
+  background: darkred;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 900;
+  font-size: 10px;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+body {
+  display: grid;
+  gap: 10px;
+  grid-template: auto 1fr auto / auto 1fr auto;
+  height: 100%;
+}
+
+/* NAVIGATION */
+
+nav {
+  display: grid;
+  background: rosybrown;
+  grid-column: 1 / 4;
+}
+
+nav ul {
+  list-style-type: none;
+  justify-self: center;
+  align-self: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0px 50px;
+}
+nav ul li a {
+  text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+  display: grid;
+  background: coral;
+  grid-column: 1 / 4;
+}
+
+header h1 {
+  background: chartreuse;
+  justify-self: center;
+  align-self: center;
+}
+
+/* CONTENT */
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 4fr 1fr;
+  grid-template-rows: 2fr 4fr 2fr;
+  background: goldenrod;
+  grid-column: 2 / 3;
+}
+
+.content .menu-bar {
+  display: grid;
+  background: royalblue;
+  grid-template-columns: 2fr 4fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+}
+
+.content .Post {
+  background: saddlebrown;
+  display: inline-block;
+  grid-column: 1 / 4;
+  grid-row: 1fr;
+}
+
+/* FOOTER */
+
+footer {
+  background: wheat;
+  grid-column: 1 / 4;
+}
